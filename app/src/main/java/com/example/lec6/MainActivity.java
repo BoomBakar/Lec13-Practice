@@ -1,5 +1,6 @@
 package com.example.lec6;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -20,14 +21,18 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                LayoutInflater layoutInflater = getLayoutInflater();
-                View myLayout = layoutInflater.inflate(R.layout.activity_main,null);
-                Toast myToast = new Toast(getApplicationContext());
-                myToast.setDuration(Toast.LENGTH_LONG);
-                myToast.setView(myLayout);
-                //myToast.setGravity(Gravity.CENTER);
-                
-
+//                viewLayoutInflater layoutInflater = getLayoutInflater();
+//                View myLayout = layoutInflater.inflate(R.layout.activity_main,null);
+//                Toast myToast = new Toast(getApplicationContext());
+//                myToast.setDuration(Toast.LENGTH_LONG);
+//                myToast.setView(myLayout);
+//                myToast.setGravity(Gravity.CENTER,0,0);
+//                myToast.show();
+                AlertDialog.Builder build = new AlertDialog.Builder(MainActivity.this);
+                build.setCancelable(true);
+                build.setTitle("Title");
+                build.setMessage("Are you Sure??!?!");
+                //build.setPositiveButton()
             }
         });
     }
